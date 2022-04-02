@@ -1,0 +1,69 @@
+ 
+<html>
+  <head>
+    <title>Emotion To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  
+  
+   
+      <h1 class="heading"> Gesture to Emoji</h1>
+      <br><div class="container"></div><div id="emojidiv" class="btn">
+      <span>&#128080;</span>
+      <span>&#128076;</span>
+      <span>&#128077;</span>
+      <span>&#128078;</span>
+      <span>&#128070;</span>
+    </div>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+      	<br><br>
+        <b style="color: yellow"> Like? </b>
+        <br><br>
+        <b style="color: black">Dislike?</b>
+        <br><br>
+        <b style="color: rgb(0, 255, 42)">Victory?</b>
+        <br>
+      </p>
+<div class="col-md-4 col-sm-12 col-xs-12">
+  <label>Webacm view:</label>
+  <div id="camera"></div>
+  <br><br>
+  <button onclick="takeSnapshot()" class="btn btn-success" >Capture Image</button>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+  <label>Prediction 1:</label>
+  <p class="emotion_name " id="result_emotion_name1"></p>
+  <p class="emoji" id="update_emoji1"></p>
+  <label>Prediction 2:</label>
+  <p class="emotion_name " id="result_emotion_name2"></p>
+  <p class="emoji" id="update_emoji2"></p>
+</div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button onclick="check()" class="btn btn-danger">Predict Gesture</button>
+      </div>
+
+ 
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
